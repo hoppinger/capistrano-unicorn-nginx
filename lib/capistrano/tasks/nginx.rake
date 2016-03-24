@@ -35,7 +35,7 @@ namespace :nginx do
   task :defaults do
     on roles :web do
       set :nginx_server_name, fetch(:nginx_server_name, host.to_s)
-      set :nginx_server_port, fetch(:nginx_server_port, 80)
+      set :nginx_server_address, fetch(:nginx_server_address, 80)
     end
   end
 
