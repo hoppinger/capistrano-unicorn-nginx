@@ -73,10 +73,6 @@ namespace :unicorn do
 
 end
 
-namespace :deploy do
-  after :publishing, 'unicorn:restart'
-end
-
 desc 'Server setup tasks'
 task :setup do
   invoke 'unicorn:setup_initializer'
