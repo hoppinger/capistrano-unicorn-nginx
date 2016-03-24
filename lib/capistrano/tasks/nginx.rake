@@ -73,10 +73,6 @@ namespace :nginx do
 
 end
 
-namespace :deploy do
-  after :publishing, 'nginx:reload'
-end
-
 desc 'Server setup tasks'
 task :setup do
   invoke 'nginx:setup'
